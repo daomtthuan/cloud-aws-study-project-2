@@ -18,21 +18,23 @@ import {
 
   // @TODO1 IMPLEMENT A RESTFUL ENDPOINT
   // GET /filteredimage?image_url={{URL}}
-  app.get("/filteredimage", async (req, res, next) => {
+  app.get("/filteredimage", async (req, res) => {
     try {
       console.log("Get URL image");
-      const absolutePath = await filterImageFromURL(req.query.image_url) as string;
+      const absolutePath = await filterImageFromURL(req.query.image_url as string);
 
       return res.status(200).sendFile(absolutePath, async (err) => {
         console.log("File downloaded");
 
-        if (!err) {
-          await deleteLocalFiles([absolutePath]);
-          console.log("File deleted");
+        if (err) {
+          return res.status(422);
         }
+
+        await deleteLocalFiles([absolutePath]);
+        console.log("File deleted");
       });
     } catch (e) {
-      return next(e);
+      return res.status(500).send(e);
     }
   });
 
