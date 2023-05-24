@@ -1,5 +1,8 @@
 import bodyParser from 'body-parser';
-import express from 'express';
+import express, {
+  Request,
+  Response,
+} from 'express';
 
 import {
   deleteLocalFiles,
@@ -16,12 +19,12 @@ import {
   // Use the body parser middleware for post requests
   app.use(bodyParser.json());
 
-  // @TODO1 IMPLEMENT A RESTFUL ENDPOINT
+  // ! @TODO1 IMPLEMENT A RESTFUL ENDPOINT
   // GET /filteredimage?image_url={{URL}}
-  app.get("/filteredimage", async (req, res) => {
+  app.get("/filteredimage", async (req: Request, res: Response) => {
     try {
       console.log("Get URL image");
-      const absolutePath = await filterImageFromURL(req.query.image_url as string);
+      const absolutePath: string = await filterImageFromURL(req.query.image_url as string);
 
       return res.status(200).sendFile(absolutePath, async (err) => {
         console.log("File downloaded");
@@ -37,7 +40,6 @@ import {
       return res.status(500).send(e);
     }
   });
-
   //! END @TODO1
 
   // Root Endpoint
