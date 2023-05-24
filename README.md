@@ -8,9 +8,9 @@ Udagram is a simple cloud application developed alongside the Udacity Cloud Engi
 
 2. GitHub
 
-    + repositories : <https://github.com/daomtthuan/cloud-aws-study-project-2.git>
+    + repositories: <https://github.com/daomtthuan/cloud-aws-study-project-2.git>
 
-    + main branch: https://github.com/daomtthuan/cloud-aws-study-project-2/tree/main
+    + main branch: <https://github.com/daomtthuan/cloud-aws-study-project-2/tree/main>
 
     + develop branch: <https://github.com/daomtthuan/cloud-aws-study-project-2/tree/development>
 
