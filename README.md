@@ -4,28 +4,27 @@ Udagram is a simple cloud application developed alongside the Udacity Cloud Engi
 
 ## URL endpoint
 
-1. URL ELB : http://image-filter-starter-code-dev-thuandmt.us-east-1.elasticbeanstalk.com/
+1. URL ELB : <http://image-filter-starter-code-dev-thuandmt.us-east-1.elasticbeanstalk.com/>
 
 2. GitHub
 
-    + repositories : https://github.com/TrungLeIT/Cloud-AWS-Study.git
+    + repositories : <https://github.com/daomtthuan/cloud-aws-study-project-2.git>
 
-    + develop branch: https://github.com/TrungLeIT/Cloud-AWS-Study/tree/development
+    + main branch: https://github.com/daomtthuan/cloud-aws-study-project-2/tree/main
 
-    + production branch: https://github.com/TrungLeIT/Cloud-AWS-Study/tree/production
+    + develop branch: <https://github.com/daomtthuan/cloud-aws-study-project-2/tree/development>
+
+    + production branch: <https://github.com/daomtthuan/cloud-aws-study-project-2/tree/production>
 
 ## Image URL for test
 
-    + https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg
+    + <https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg>
 
-    + URL ELB test application : http://cloud-aws-study-development-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg
+    + URL ELB test application : <http://image-filter-starter-code-dev-thuandmt.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg>
 
 ### Setup Node Environment
 
 You'll need to create a new node server. Open a new terminal within the project directory and run:
-
-
-
 
 1. Initialize a new project: `npm i`
 
