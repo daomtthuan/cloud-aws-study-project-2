@@ -19,7 +19,6 @@ import {
   // Use the body parser middleware for post requests
   app.use(bodyParser.json());
 
-  // ! @TODO1 IMPLEMENT A RESTFUL ENDPOINT
   // GET /filteredimage?image_url={{URL}}
   app.get("/filteredimage", async (req: Request, res: Response) => {
     try {
@@ -29,22 +28,19 @@ import {
       return res.status(200).sendFile(absolutePath, async (err) => {
         console.log("File downloaded");
 
-        if (err) {
-          return res.status(422);
+        if (!err) {
+          await deleteLocalFiles([absolutePath]);
+          console.log("File deleted");
         }
-
-        await deleteLocalFiles([absolutePath]);
-        console.log("File deleted");
       });
     } catch (e) {
       return res.status(500).send(e);
     }
   });
-  //! END @TODO1
 
   // Root Endpoint
   // Displays a simple message to the user
-  app.get("/", async (req, res) => {
+  app.get("/", async (_req: Request, res: Response) => {
     res.send("try GET /filteredimage?image_url={{}}");
   });
 
